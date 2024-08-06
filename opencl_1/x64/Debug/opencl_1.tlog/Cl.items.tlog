@@ -1,7 +1,7 @@
-D:\Study\OpenCL\Project\opencl_1\file.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\file.obj
-D:\Study\OpenCL\Project\opencl_1\main.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\main.obj
-D:\Study\OpenCL\Project\opencl_1\PlatAndDevice.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\PlatAndDevice.obj
-D:\Study\OpenCL\Project\opencl_1\time_chrono.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\time_chrono.obj
-D:\Study\OpenCL\Project\opencl_1\time_chrono.h;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\time_chrono.obj
-D:\Study\OpenCL\Project\opencl_1\Vector_Add.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\Vector_Add.obj
-D:\Study\OpenCL\Project\opencl_1\Vector_multiply.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\Vector_multiply.obj
+D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\PlatAndDevice.obj
+D:\Study\OpenCL\Project\opencl_1\src\core\Vector_Add.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\Vector_Add.obj
+D:\Study\OpenCL\Project\opencl_1\src\core\Vector_multiply.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\Vector_multiply.obj
+D:\Study\OpenCL\Project\opencl_1\src\main.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\main.obj
+D:\Study\OpenCL\Project\opencl_1\src\opencl_1.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\opencl_1.obj
+D:\Study\OpenCL\Project\opencl_1\src\utils\file.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\file.obj
+D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp;D:\Study\OpenCL\Project\opencl_1\opencl_1\x64\Debug\time_chrono.obj

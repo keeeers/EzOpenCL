@@ -13,44 +13,54 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\core">
+      <UniqueIdentifier>{53101bac-a766-44a3-a6c4-a223595ded23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\utils">
+      <UniqueIdentifier>{70b939ab-1772-4b95-a1fc-e752218eb62d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\core">
+      <UniqueIdentifier>{f864b0dc-61c1-477b-940b-f4e696135208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\utils">
+      <UniqueIdentifier>{c890a7de-b006-44b7-9ace-c59d041e1436}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\core\Vector_multiply.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\PlatAndDevice.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Vector_Add.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\file.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\time_chrono.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Vector_Add.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector_multiply.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="file.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="time_chrono.h">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="time_chrono.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="PlatAndDevice.cpp">
+    <ClCompile Include="src\opencl_1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Vector_func.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="include\core\PlatAndDevice.h">
+      <Filter>头文件\core</Filter>
     </ClInclude>
-    <ClInclude Include="file.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="include\core\Vector_func.h">
+      <Filter>头文件\core</Filter>
     </ClInclude>
-    <ClInclude Include="PlatAndDevice.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="include\utils\file.h">
+      <Filter>头文件\utils</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="multiply_kernel.cl">
-      <Filter>头文件</Filter>
-    </None>
+    <ClInclude Include="include\utils\time_chrono.h">
+      <Filter>头文件\utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

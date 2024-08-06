@@ -72,6 +72,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LibraryPath>C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib</LibraryPath>
+    <IncludePath>$(ProjectDir)include\utils;$(ProjectDir)include\core;$(ProjectDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -133,21 +134,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="file.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="PlatAndDevice.cpp" />
-    <ClCompile Include="time_chrono.cpp" />
-    <ClCompile Include="time_chrono.h" />
-    <ClCompile Include="Vector_Add.cpp" />
-    <ClCompile Include="Vector_multiply.cpp" />
+    <ClCompile Include="src\core\PlatAndDevice.cpp" />
+    <ClCompile Include="src\core\Vector_Add.cpp" />
+    <ClCompile Include="src\core\Vector_multiply.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\opencl_1.cpp" />
+    <ClCompile Include="src\utils\file.cpp" />
+    <ClCompile Include="src\utils\time_chrono.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="file.h" />
-    <ClInclude Include="PlatAndDevice.h" />
-    <ClInclude Include="Vector_func.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="multiply_kernel.cl" />
+    <ClInclude Include="include\core\PlatAndDevice.h" />
+    <ClInclude Include="include\core\Vector_func.h" />
+    <ClInclude Include="include\utils\file.h" />
+    <ClInclude Include="include\utils\time_chrono.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,7 +1,20 @@
 ﻿  PlatAndDevice.cpp
   cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
-D:\Study\OpenCL\Project\opencl_1\PlatAndDevice.cpp(28,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Study\OpenCL\Project\opencl_1\PlatAndDevice.cpp(63,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Study\OpenCL\Project\opencl_1\PlatAndDevice.cpp(93,12): warning C4477: “printf”: 格式字符串“%zu”需要类型“unsigned __int64”的参数，但可变参数 1 拥有了类型“cl_uint”
-D:\Study\OpenCL\Project\opencl_1\PlatAndDevice.cpp(113,12): warning C4477: “printf”: 格式字符串“%lu”需要类型“unsigned long”的参数，但可变参数 1 拥有了类型“cl_ulong”
+  Vector_Add.cpp
+  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(28,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(63,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(93,12): warning C4477: “printf”: 格式字符串“%zu”需要类型“unsigned __int64”的参数，但可变参数 1 拥有了类型“cl_uint”
+D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(113,12): warning C4477: “printf”: 格式字符串“%lu”需要类型“unsigned long”的参数，但可变参数 1 拥有了类型“cl_ulong”
+  Vector_multiply.cpp
+  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+  main.cpp
+  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+D:\Study\OpenCL\Project\opencl_1\src\main.cpp(41,9): warning C4101: “err”: 未引用的局部变量
+  opencl_1.cpp
+  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+  file.cpp
+D:\Study\OpenCL\Project\opencl_1\src\utils\file.cpp(12,19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  time_chrono.cpp
+  正在生成代码...
   opencl_1.vcxproj -> D:\Study\OpenCL\Project\opencl_1\x64\Debug\opencl_1.exe
