@@ -3,5 +3,6 @@
 
 void arrayAdd();
 void arrayMultiplay(int );
+void arrayMultiplay_normal(int );
 #endif
 

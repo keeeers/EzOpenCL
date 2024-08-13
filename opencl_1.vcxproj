@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LibraryPath>C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib</LibraryPath>
-    <IncludePath>$(ProjectDir)include\utils;$(ProjectDir)include\core;$(ProjectDir)include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;D:\Study\OpenCL\Asset\clBLAS-2.12.0-Windows-x64\package\bin;D:\Study\OpenCL\Asset\clBLAS-2.12.0-Windows-x64\package\lib64\import;D:\Study\OpenCL\Asset\clFFT-Full-2.12.2-Windows-x64\lib64\import</LibraryPath>
+    <IncludePath>$(ProjectDir)include\utils;$(ProjectDir)include\core;$(ProjectDir)include\clBLAS;$(ProjectDir)include\;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,13 +108,13 @@
       <SDLCheck>false</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Study\OpenCL\Asset\clFFT-Full-2.12.2-Windows-x64\include;D:\Study\OpenCL\Asset\clBLAS-2.12.0-Windows-x64\package\include;C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>OpenCL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Study\OpenCL\Asset\clBLAS-2.12.0-Windows-x64\package\lib64\import;C:\Program Files %28x86%29\Intel\oneAPI\compiler\2023.2.0\windows\lib\oclfpga\host\windows64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OpenCL.lib;clBLAS.lib;clFFT.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -134,17 +134,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="include\clBLAS\example_chemm.h" />
+    <ClCompile Include="include\includeALL.h" />
+    <ClCompile Include="src\clBLAS\example_chemm.cpp" />
+    <ClCompile Include="src\core\clSTFT_core.cpp" />
     <ClCompile Include="src\core\PlatAndDevice.cpp" />
     <ClCompile Include="src\core\Vector_Add.cpp" />
     <ClCompile Include="src\core\Vector_multiply.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\opencl_1.cpp" />
+    <ClCompile Include="src\utils\clSTFT_class.cpp" />
     <ClCompile Include="src\utils\file.cpp" />
     <ClCompile Include="src\utils\time_chrono.cpp" />
+    <ClCompile Include="Vector_multiplay_normal.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\clBLASALL.h" />
+    <ClInclude Include="include\core\clfft_class.h" />
+    <ClInclude Include="include\core\clSTFT_core.h" />
     <ClInclude Include="include\core\PlatAndDevice.h" />
     <ClInclude Include="include\core\Vector_func.h" />
+    <ClInclude Include="include\utils\clSTFT_class.h" />
     <ClInclude Include="include\utils\file.h" />
     <ClInclude Include="include\utils\time_chrono.h" />
   </ItemGroup>

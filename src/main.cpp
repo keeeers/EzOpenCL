@@ -1,6 +1,7 @@
-﻿#include "Vector_func.h"
-#include "time_chrono.h"
-#include "PlatAndDevice.h"
+﻿#include "includeALL.h"
+#include "clBLASALL.h"
+#include "clSTFT_core.h"
+
 #include <chrono>
 #include <iostream>
 #include <vector>
@@ -12,19 +13,15 @@ using namespace std;
 void arrayMultiplay_normal(int);
 
 void test(void (*func)(int),int); // 正确声明 test 函数
-
+void testmultiply();// 测试高精度乘法
+void testplatanddevice();// 测试平台获取与设备获取及信息
+void testclBLAS();// 测试clBLAS库
 
 int main() {
-	//arrayAdd();
-	//arrayMultiplay(10);
-	// 测试 arrayMultiplay 函数
-	//test(arrayMultiplay,500000000+1);
-	//test(arrayMultiplay, 5001);
-	// 测试 arrayMultiplay_normal 函数
-	//test(arrayMultiplay_normal,50001);
-	cl_platform_id platform = GetPlatform();
-	cl_device_id device = GetDevice(platform);
-	ShowDeviceInfo(device);
+	//testmultiply();
+	//testplatanddevice();
+	//testclBLAS();
+	clSTFT_test();
 	return 0;
 }
 
@@ -36,30 +33,25 @@ void test(void (*func)(int),int MAXNUM=5001) { // 正确定义 test 函数
 	}
 }
 
+void testmultiply() {
 
-void arrayMultiplay_normal(int array_size = 1000) {
-	cl_int err;
-	//build array A,B,  result container C
-	int lenA = array_size;
-	int lenB = array_size;
-	int lenC = array_size * 2 + 1;
-	vector<int> A(lenA);
-	vector<int> B(lenB);
-	vector<int> C(lenC);
-
-	for (int i = 0; i < lenA; ++i) {
-		A[i] = static_cast<int>(i % 10);
-	}
-	for (int i = 0; i < lenB; ++i) {
-		B[i] = static_cast<int>(i % 10);
-	}
-	for (int i = 0; i < lenA; i++) {
-		for (int j = 0; j < lenB; j++) {
-			C[i + j] += A[i] * B[j];
-		}
-		C[i + 1] += C[i] / 10;
-		C[i] = C[i] % 10;
-	}
-	return;
+	arrayAdd();
+	arrayMultiplay(10);
+	//测试 arrayMultiplay 函数
+	test(arrayMultiplay,500000000+1);
+	test(arrayMultiplay, 5001);
+	//测试 arrayMultiplay_normal 函数
+	test(arrayMultiplay_normal,501);
 }
 
+void testplatanddevice() {
+	cl_platform_id platform = GetPlatform();
+	cl_device_id device = GetDevice(platform);
+	ShowDeviceInfo(device);
+}
+
+void testclBLAS() {
+	int (*fuc)(void);
+	fuc = example_chemm;
+	WithTime([fuc]() {fuc(); },"clBLAS example_chemm :");
+}

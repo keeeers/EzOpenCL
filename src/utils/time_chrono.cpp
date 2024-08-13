@@ -33,3 +33,8 @@ void TimeKeeper::dur_withPre(const char* Pre) {
     std::cout << Pre;
     TimeKeeper::dur();
 }
+
+void TimeKeeper::dur_withPre_Init(const char* Pre) {
+    dur_withPre(Pre);
+    Init();
+}

@@ -25,6 +25,12 @@
     <Filter Include="头文件\utils">
       <UniqueIdentifier>{c890a7de-b006-44b7-9ace-c59d041e1436}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\clBLAS">
+      <UniqueIdentifier>{22605f65-1dce-41f9-bc92-d53f90448593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\clBLAS">
+      <UniqueIdentifier>{5cd5681f-510f-410f-8cf4-8fed655e16ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Vector_multiply.cpp">
@@ -48,6 +54,24 @@
     <ClCompile Include="src\opencl_1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Vector_multiplay_normal.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="include\includeALL.h">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="include\clBLAS\example_chemm.h">
+      <Filter>头文件\clBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\clBLAS\example_chemm.cpp">
+      <Filter>源文件\clBLAS</Filter>
+    </ClCompile>
+    <ClCompile Include="src\utils\clSTFT_class.cpp">
+      <Filter>源文件\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\clSTFT_core.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\PlatAndDevice.h">
@@ -61,6 +85,18 @@
     </ClInclude>
     <ClInclude Include="include\utils\time_chrono.h">
       <Filter>头文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\clBLASALL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\clSTFT_class.h">
+      <Filter>头文件\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\clSTFT_core.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\clfft_class.h">
+      <Filter>头文件\core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
