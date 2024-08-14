@@ -45,13 +45,15 @@ void testmultiply() {
 }
 
 void testplatanddevice() {
-	cl_platform_id platform = GetPlatform();
-	cl_device_id device = GetDevice(platform);
-	ShowDeviceInfo(device);
+	cl_platform_id platform = GetPlatform_PD();
+	cl_device_id device = GetDevice_PD(platform);
+	ShowDeviceInfo_PD(device);
 }
 
 void testclBLAS() {
 	int (*fuc)(void);
-	fuc = example_chemm;
-	WithTime([fuc]() {fuc(); },"clBLAS example_chemm :");
+	TimeKeeper timedog;
+	timedog.Init();
+	//example_chemm();
+	timedog.dur_withPre_Init("testclBLAS");
 }

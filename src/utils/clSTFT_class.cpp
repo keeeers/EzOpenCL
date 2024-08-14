@@ -8,28 +8,6 @@
 #include <complex>
 #include <vector>
 
-int clSTFT_class::show_arg() {
-    /*
-    std::string FreqAxis; // 线性或对数尺度
-    double FreqMin;       // 频率最小值
-    double FreqMax;       // 频率最大值
-    double FreqResolution;// 频率分辨率
-    int FreqCount;        // 频率方向上的网格点数
-    int TimeCount;        // 时间方向上的网格点数
-    bool RemoveDC;        // 是否去除直流分量
-    std::string WindowType;// 窗函数类型
-    int WindowSize;       // 窗函数长度
-    double* WindowData;   // 窗函数数组
-    int WindowStep;       // 窗口移动步长
-    int DEBUG;            // debug观察
-    double SampleFreq;    // 输入数据采样率*/
-    printf("Freq__ Min:%10.2lf ; Max:%10.2lf ; Fs:%10.2lf\n", FreqMin,FreqMax,FreqResolution);
-    printf("Window__ Type:%s ; Size:%5.d ; Step:%5.d\n", WindowType, WindowSize, WindowStep);
-    printf("DEBUG:%s", DEBUG ? "True" : "False");
-    printf("SampleFreq:%10.2lf", SampleFreq);
-    return 1;
-}
-
 int clSTFT_class::createWindow() {
     if (WindowData == NULL) {
         WindowData = new double[WindowSize];  // 分配内存
@@ -55,6 +33,46 @@ int clSTFT_class::createWindow() {
     return 1;
 }
 
+clSTFT_class::clSTFT_class()
+    : FreqAxis("LinearAxis"), FreqMin(0.0), FreqMax(0.0),
+    FreqResolution(0.0), FreqCount(256), TimeCount(2048),
+    RemoveDC(true), WindowType("Gauss"), WindowSize(32),
+    WindowData(NULL), DEBUG(false), WindowStep(26), SampleFreq(1000),
+    class_fft(NULL){
+        class_fft = new clFFT_class(this);
+    }
+
+int clSTFT_class::Init_Freq() {
+    FreqMin = 0.0;
+    FreqMax = SampleFreq / 2;
+    FreqResolution = SampleFreq / WindowSize;
+    FreqCount = WindowSize;
+    return 1;
+}
+
+int clSTFT_class::show_arg() {
+    /*
+    std::string FreqAxis; // 线性或对数尺度
+    double FreqMin;       // 频率最小值
+    double FreqMax;       // 频率最大值
+    double FreqResolution;// 频率分辨率
+    int FreqCount;        // 频率方向上的网格点数
+    int TimeCount;        // 时间方向上的网格点数
+    bool RemoveDC;        // 是否去除直流分量
+    std::string WindowType;// 窗函数类型
+    int WindowSize;       // 窗函数长度
+    double* WindowData;   // 窗函数数组
+    int WindowStep;       // 窗口移动步长
+    int DEBUG;            // debug观察
+    double SampleFreq;    // 输入数据采样率*/
+    printf("Freq Min:%10.2lf ; Max:%10.2lf ; Fs:%10.2lf\n", FreqMin, FreqMax, FreqResolution);
+    printf("Window Type: %s ; Size:%5.d ; Step:%5.d\n", WindowType.c_str(), WindowSize, WindowStep);
+    printf("TimeCount:%10.d ; FreqCount:%10.d\n", TimeCount, FreqCount);
+    printf("DEBUG:%s\n", DEBUG ? "True" : "False");
+    printf("SampleFreq:%10.2lf\n", SampleFreq);
+    return 1;
+}
+
 int clSTFT_class::norm_STFT(std::complex<double> A[],int len) {
     //擦除数据
     norm_result.erase(norm_result.begin(), norm_result.end());
@@ -63,7 +81,7 @@ int clSTFT_class::norm_STFT(std::complex<double> A[],int len) {
         std::vector<std::complex<double>> B;
         B.clear();
         B.resize(0);
-        norm_STFT_clip(&A[i], B);
+        norm_STFT_clip(&(A[i]), B);
         /*for (int j = 0; j < WindowSize; j++) {
             printf("%5.2lf ", std::abs(B[j]));
         }
@@ -88,8 +106,25 @@ int clSTFT_class::norm_STFT_clip(std::complex<double> A[],std::vector<std::compl
 }
 
 int clSTFT_class::show_norm_result() {
-    const int freqlen = WindowSize;
-    const int timelen = norm_result.size();
+    const size_t freqlen = WindowSize;
+    const size_t timelen = norm_result.size();
+
+    printf("_________________norm_result_START_______________\n");
+    for (int i = 0; i < timelen; i++) {
+        std::vector<std::complex<double>> B = norm_result[i];
+        for (int j = 0; j < freqlen / 2; j++) {
+            printf("%10.3lf %10.3lf\n", B[j].real(), B[j].imag());
+        }
+        if (i >= 0) {
+            break;
+        }
+    }
+    printf("_________________norm_result_END_______________\n");
+
+
+    //&&&&&&&&&&&&&&&&&&&&&&&&&& debug return
+    return 1;
+
     // figuer max,min
     double mint=std::abs(norm_result[0][freqlen/2]), maxt = mint;
     for (int i = 0; i < timelen; i++) {
@@ -130,7 +165,7 @@ int clSTFT_class::show_norm_result() {
             }
             else if (normalized_value < 0.75) {
                 std::cout << "\033[32m"; // 设置绿色
-                printf("%");
+                printf("$");
             }
             else {
                 std::cout << "\033[34m"; // 设置蓝色

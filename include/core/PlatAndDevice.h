@@ -1,7 +1,10 @@
-﻿#include <CL/cl.h>
+﻿#include "clfft_class.h"
+#include <CL/cl.h>
+
 #ifndef PLATANDDEVICE
 #define PLATANDDEVICE
-cl_platform_id GetPlatform();
-cl_device_id GetDevice(cl_platform_id platform);
-void ShowDeviceInfo(cl_device_id device);
+
+cl_platform_id GetPlatform_PD();
+cl_device_id GetDevice_PD(cl_platform_id platform);
+void ShowDeviceInfo_PD(cl_device_id device);
 #endif

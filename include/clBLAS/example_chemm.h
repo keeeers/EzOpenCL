@@ -1,6 +1,6 @@
-﻿#ifndef EX_CHEMM
-#define EX_CHEMM
+﻿#ifndef EXCHEMM
+#define EXCHEMM
 
-int example_chemm(void);
+int example_chemm();
 
 #endif

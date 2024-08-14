@@ -11,7 +11,7 @@ void WithTime(function<void()> func, const char* PreInfo) {
     func(); // 调用传入的函数
     auto endTime = std::chrono::high_resolution_clock::now();
     auto timeInterval = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - beginTime);
-    cout << PreInfo << "Execution time: " << timeInterval.count() << " ms" << endl;
+    cout << PreInfo << " Execution time: " << timeInterval.count() << " ms" << endl;
 }
 TimeKeeper::TimeKeeper() : startTime(std::chrono::high_resolution_clock::now()) {}
 
@@ -26,11 +26,11 @@ void TimeKeeper::dur() const
 {
     auto endTime = std::chrono::high_resolution_clock::now();
     auto timeInterval = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
-    std::cout << "TimeKeeper dur time: " << timeInterval.count() << " ms" << std::endl;
+    std::cout << " dur time: " << timeInterval.count() << " ms" << std::endl;
 }
 
 void TimeKeeper::dur_withPre(const char* Pre) {
-    std::cout << Pre;
+    printf("%-20s", Pre);
     TimeKeeper::dur();
 }
 

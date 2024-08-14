@@ -1,8 +1,9 @@
 ﻿#include <CL/cl.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "PlatAndDevice.h"
 
-cl_platform_id GetPlatform(){
+cl_platform_id GetPlatform_PD(){
     cl_uint platformsNum;
     clGetPlatformIDs(0, NULL, &platformsNum);
     cl_platform_id* platforms = (cl_platform_id*)malloc(sizeof(cl_platform_id) * platformsNum);
@@ -39,7 +40,7 @@ cl_platform_id GetPlatform(){
     return SelectPlatform;
 }
 
-cl_device_id GetDevice(cl_platform_id platform) {
+cl_device_id GetDevice_PD(cl_platform_id platform) {
     cl_uint devicesNum;
     clGetDeviceIDs(platform, CL_DEVICE_TYPE_ALL, 0, NULL, &devicesNum);
     cl_device_id* devices = (cl_device_id*)malloc(sizeof(cl_device_id) * devicesNum);
@@ -74,7 +75,7 @@ cl_device_id GetDevice(cl_platform_id platform) {
     return SelectDevice;
 }
 
-void ShowDeviceInfo(cl_device_id device) {
+void ShowDeviceInfo_PD(cl_device_id device) {
     char deviceName[128];
     cl_uint computeUnits;
     cl_uint maxWorkGroupSize;

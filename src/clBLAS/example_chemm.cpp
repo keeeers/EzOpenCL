@@ -1,5 +1,5 @@
 ﻿#include "example_chemm.h"
-#include "includeALL.h"
+#include "time_chrono.h"
 
 #include <sys/types.h>
 #include <stdio.h>
@@ -36,7 +36,7 @@ static cl_float2 C[M * N] = {
     {{41, 14}},  {{0,   42}}, {{43, -1}},
 };
 static const size_t ldc = N;
-int example_chemm(void)
+int example_chemm()
 {
     TimeKeeper timedog;
     timedog.Init();

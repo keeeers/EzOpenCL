@@ -1,9 +1,17 @@
 #ifndef CLSTFT_CLASS
 #define CLSTFT_CLASS
 
+#include "clfft_class.h"
+#include "clSTFT_core.h"
+
 #include <string>
 #include <complex>
 #include <vector>
+
+class clFFT_class;
+class clSTFT_class;
+class Mem_manger;
+class Window_class;
 
 class clSTFT_class
 {
@@ -22,14 +30,15 @@ public:
     int DEBUG;            // debug观察
     double SampleFreq;    // 输入数据采样率
     std::vector<std::vector<std::complex<double>>> norm_result; // 串行方法结果
+    clFFT_class* class_fft;
+    Data_real input_data;
 
+    // 初始化函数
     int createWindow();
+    
+    int Init_Freq();
     // 构造函数
-    clSTFT_class()
-        : FreqAxis("LinearAxis"), FreqMin(0.0), FreqMax(0.0),
-        FreqResolution(0.0), FreqCount(256), TimeCount(2048),
-        RemoveDC(true), WindowType("Gauss"), WindowSize(32),
-        WindowData(NULL),DEBUG(false),WindowStep(26),SampleFreq(1000){}
+    clSTFT_class();
 
     // 可以添加更多的成员函数，比如设置和获取参数的函数
     int show_arg();

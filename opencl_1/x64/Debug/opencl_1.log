@@ -1,4 +1,2 @@
-﻿  example_chemm.cpp
-  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
-opencl_1\x64\Debug\example_chemm.obj : warning LNK4042: 对象被多次指定；已忽略多余的指定
+﻿  time_chrono.cpp
   opencl_1.vcxproj -> D:\Study\OpenCL\Project\opencl_1\x64\Debug\opencl_1.exe

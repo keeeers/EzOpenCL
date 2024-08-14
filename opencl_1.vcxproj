@@ -137,6 +137,7 @@
     <ClCompile Include="include\clBLAS\example_chemm.h" />
     <ClCompile Include="include\includeALL.h" />
     <ClCompile Include="src\clBLAS\example_chemm.cpp" />
+    <ClCompile Include="src\core\clfft_class.cpp" />
     <ClCompile Include="src\core\clSTFT_core.cpp" />
     <ClCompile Include="src\core\PlatAndDevice.cpp" />
     <ClCompile Include="src\core\Vector_Add.cpp" />
