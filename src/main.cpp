@@ -16,12 +16,15 @@ void test(void (*func)(int),int); // 正确声明 test 函数
 void testmultiply();// 测试高精度乘法
 void testplatanddevice();// 测试平台获取与设备获取及信息
 void testclBLAS();// 测试clBLAS库
+void test_time_chrono_class_Watcher();
+
 
 int main() {
 	//testmultiply();
 	//testplatanddevice();
 	//testclBLAS();
 	clSTFT_test();
+	//test_time_chrono_class_Watcher();
 	return 0;
 }
 
@@ -56,4 +59,16 @@ void testclBLAS() {
 	timedog.Init();
 	//example_chemm();
 	timedog.dur_withPre_Init("testclBLAS");
+}
+
+void test_time_chrono_class_Watcher() {
+	Watcher timeWatcher(5);
+	timeWatcher.levelup("进入总层级1");
+	timeWatcher.levelup("层级1-1");
+	timeWatcher.leveldown();
+	timeWatcher.levelup("层级1-2");
+	timeWatcher.levelup("层级1-2-1");
+	timeWatcher.leveldown();
+	timeWatcher.leveldown();
+	timeWatcher.leveldown();
 }

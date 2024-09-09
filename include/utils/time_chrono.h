@@ -19,4 +19,22 @@ class TimeKeeper{
     private:
         std::chrono::high_resolution_clock::time_point startTime; // 存储开始时间
 };
+
+class Watcher {
+public:
+    const int default_MaxDeep = 20;
+    Watcher();
+    Watcher(int);
+
+    int GetDeep();
+
+    int levelup(const char* );
+
+    int leveldown();
+
+private:
+    std::chrono::high_resolution_clock::time_point *Time_Start;
+    int Deep,DeepMaxLen;
+    const char* *Level_Scripts;
+};
 #endif // !TIME_CHRONO

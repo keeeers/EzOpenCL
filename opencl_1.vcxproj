@@ -139,6 +139,8 @@
     <ClCompile Include="src\clBLAS\example_chemm.cpp" />
     <ClCompile Include="src\core\clfft_class.cpp" />
     <ClCompile Include="src\core\clSTFT_core.cpp" />
+    <ClCompile Include="src\core\EzCLASS_Window.cpp" />
+    <ClCompile Include="src\core\EzSTFT.cpp" />
     <ClCompile Include="src\core\PlatAndDevice.cpp" />
     <ClCompile Include="src\core\Vector_Add.cpp" />
     <ClCompile Include="src\core\Vector_multiply.cpp" />
@@ -153,6 +155,10 @@
     <ClInclude Include="include\clBLASALL.h" />
     <ClInclude Include="include\core\clfft_class.h" />
     <ClInclude Include="include\core\clSTFT_core.h" />
+    <ClInclude Include="include\core\EzCLASS_data.h" />
+    <ClInclude Include="include\core\EzCLASS_fft.h" />
+    <ClInclude Include="include\core\EzCLASS_Window.h" />
+    <ClInclude Include="include\core\EzSTFT.h" />
     <ClInclude Include="include\core\PlatAndDevice.h" />
     <ClInclude Include="include\core\Vector_func.h" />
     <ClInclude Include="include\utils\clSTFT_class.h" />

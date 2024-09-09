@@ -75,6 +75,12 @@
     <ClCompile Include="src\core\clfft_class.cpp">
       <Filter>源文件\core</Filter>
     </ClCompile>
+    <ClCompile Include="src\core\EzSTFT.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\EzCLASS_Window.cpp">
+      <Filter>源文件\core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\core\PlatAndDevice.h">
@@ -100,6 +106,18 @@
     </ClInclude>
     <ClInclude Include="include\clBLASALL.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\EzSTFT.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\EzCLASS_data.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\EzCLASS_Window.h">
+      <Filter>头文件\core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\core\EzCLASS_fft.h">
+      <Filter>头文件\core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

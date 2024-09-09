@@ -32,7 +32,7 @@ public:
     std::vector<std::vector<std::complex<double>>> norm_result; // 串行方法结果
     clFFT_class* class_fft;
     Data_real input_data;
-
+    
     // 初始化函数
     int createWindow();
     
