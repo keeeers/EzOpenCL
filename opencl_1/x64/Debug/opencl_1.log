@@ -1,20 +1,19 @@
-﻿  includeALL.h
+﻿  EzCLASS_Window.cpp
+D:\Study\OpenCL\Project\opencl_1\src\core\EzCLASS_Window.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
-  clfft_class.cpp
-  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
-D:\Study\OpenCL\Project\opencl_1\src\core\clfft_class.cpp(356,20): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
-  clSTFT_core.cpp
-  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
-D:\Study\OpenCL\Project\opencl_1\src\core\clSTFT_core.cpp(68,16): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-D:\Study\OpenCL\Project\opencl_1\src\core\clSTFT_core.cpp(82,13): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Study\OpenCL\Project\opencl_1\include\core\EzSTFT.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
   EzSTFT.cpp
 D:\Study\OpenCL\Project\opencl_1\src\core\EzSTFT.cpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 D:\Study\OpenCL\Project\opencl_1\include\core\EzSTFT.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_window.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
-D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_fft.h(4,7): error C2011: “EzCLASS_data”:“class”类型重定义
-D:\Study\OpenCL\Project\opencl_1\src\core\EzSTFT.cpp(38,15): error C2027: 使用了未定义类型“EzCLASS_data”
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
+D:\Study\OpenCL\Project\opencl_1\include\core\EzSTFT.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(23,23): error C2143: 语法错误: 缺少“;”(在“*”的前面)
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(23,9): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\Study\OpenCL\Project\opencl_1\include\core\EzCLASS_Window.h(23,31): error C2238: 意外的标记位于“;”之前
 D:\Study\OpenCL\Project\opencl_1\src\core\EzSTFT.cpp(43,17): error C2027: 使用了未定义类型“EzCLASS_window”
-D:\Study\OpenCL\Project\opencl_1\src\core\EzSTFT.cpp(49,14): error C2027: 使用了未定义类型“EzCLASS_fft”
   PlatAndDevice.cpp
   cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
 D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(29,5): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
@@ -24,8 +23,6 @@ D:\Study\OpenCL\Project\opencl_1\src\core\PlatAndDevice.cpp(114,12): warning C44
   main.cpp
   cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
 D:\Study\OpenCL\Project\opencl_1\src\main.cpp(57,8): warning C4101: “fuc”: 未引用的局部变量
-  clSTFT_class.cpp
-  cl_version.h: CL_TARGET_OPENCL_VERSION is not defined. Defaulting to 300 (OpenCL 3.0)
   time_chrono.cpp
 D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp(94,12): warning C4477: “printf”: 格式字符串“%lld”需要类型“__int64”的参数，但可变参数 2 拥有了类型“_To”
 D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp(94,12): warning C4477:         with
@@ -34,3 +31,5 @@ D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp(94,12): warning C4477
 D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp(94,12): warning C4477:         ]
   正在生成代码...
 D:\Study\OpenCL\Project\opencl_1\src\utils\time_chrono.cpp(81,1): warning C4715: “Watcher::levelup”: 不是所有的控件路径都返回值
+D:\Study\OpenCL\Project\opencl_1\src\core\EzCLASS_Window.cpp(21,1): error C4716: “EzCLASS_Window::initWindow”: 必须返回一个值
+D:\Study\OpenCL\Project\opencl_1\src\core\EzCLASS_Window.cpp(17,1): error C4716: “EzCLASS_Window::init”: 必须返回一个值
